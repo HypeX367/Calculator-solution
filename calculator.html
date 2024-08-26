@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="shortcut icon" href="calculator.png" type="image/x-icon">
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="top">
+            <div style="font-weight: 600;font-size:1.2em;letter-spacing: 3px;padding-top: 20px;">calc</div>
+            <div style="display: flex; gap: 20px;">
+                <p style="padding-top: 21px;">Theme</p>
+                <div>
+                    <p style="text-align: center;letter-spacing: 7px;padding-left: 3px;">1 2 3</p>
+                    <div class="theme" onclick="changeTheme()"><div class="scroll"></div></div>
+                </div>
+            </div>
+        </div>
+        <div class="result" style="color:white">
+            <div class="result-val"></div>
+        </div>
+        <div class="container">
+            <button onclick="renderValue('7')">7</button>
+            <button onclick="renderValue(8)">8</button>
+            <button onclick="renderValue(9)">9</button>
+            <button class="del" onclick="renderValue('del')" style="color:white;box-shadow: 3px 4px 0;">DEL</button>
+            <button onclick="renderValue(4)">4</button>
+            <button onclick="renderValue(5)">5</button>
+            <button onclick="renderValue(6)">6</button>
+            <button onclick="renderValue('+')">+</button>
+            <button onclick="renderValue(1)">1</button>
+            <button onclick="renderValue(2)">2</button>
+            <button onclick="renderValue(3)">3</button>
+            <button onclick="renderValue('-')">-</button>
+            <button onclick="renderValue('.')">.</button>
+            <button onclick="renderValue(0)">0</button>
+            <button onclick="renderValue('/')">/</button>
+            <button onclick="renderValue('x')">x</button>
+            <button class="reset" style="grid-column: 1 / 3;color: white;" onclick="result.innerHTML = '';">RESET</button>
+            <button class="equalTo" style="box-shadow: 3px 4px 0 hsl(6, 70%, 34%);grid-column: 3 / -1;color:white" onclick="evaluateExpression()">=</button>
+        </div>
+    </div>
+    <script src="calculator.js"></script>
+</body>
+</html>
